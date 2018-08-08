@@ -59,6 +59,12 @@ class BootstrapRenderer extends DefaultFormRenderer
     /** @var bool */
     private $novalidate;
 
+    public function hideLabels(){
+        $this->wrappers['label']['container'] = 'div class=hidden';
+        $this->wrappers['control']['container'] = 'div class=col-sm-12';
+        $this->wrappers['pair']['container'] = 'div class="form-group has-feedback"';
+    }
+
     public function __construct($novalidate = true)
     {
         $this->novalidate = $novalidate;
