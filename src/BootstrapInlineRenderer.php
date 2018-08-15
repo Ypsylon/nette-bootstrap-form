@@ -64,6 +64,10 @@ class BootstrapInlineRenderer extends DefaultFormRenderer
         $this->novalidate = $novalidate;
     }
 
+    public function hideLabels(){
+        $this->wrappers['label']['container'] = 'div class=hidden';
+    }
+
     /**
      * Provides complete form rendering.
      * @param  Nette\Forms\Form
